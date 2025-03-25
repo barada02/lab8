@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { StudentComponent } from './student/student.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [CommonModule, StudentComponent, FormsModule],
+  template: `
+    <main>
+      <app-student></app-student>
+    </main>
+  `,
+  styles: []
 })
 export class AppComponent {
   title = 'lab8';
